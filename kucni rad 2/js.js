@@ -13,7 +13,9 @@ btn.addEventListener("click", ispisiPodatke);
 btnSort.addEventListener(`click`, sortiraj);
 
 //Funcije rad
-function ispisiPodatke() {
+function ispisiPodatke(e) {
+  e.preventDefault();
+  ime.focus();
   let vrednostImena = ime.value;
   let vrednostBroja = broj.value;
   ispis.innerHTML += `<tr class="row">
